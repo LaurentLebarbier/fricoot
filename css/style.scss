@@ -1,0 +1,132 @@
+@import './variable.scss';
+@import './formindex.scss';
+@import './heritage.scss';
+@import './questionnaire.scss';
+@import './index.scss';
+
+* {
+    margin:0;   
+    padding:0;
+}
+
+html {
+    box-sizing: border-box;
+} 
+
+body, html{
+    height:100%;
+}
+
+body{
+    
+    position: absolute;
+    overflow: visible;
+    width: 100%;
+    margin: 0px;
+    height: 100%;
+    background-color: $maincolor;
+    font-size: 0.875rem;
+    color: rgb(51, 51, 51);
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.25rem;
+    padding: 0px;
+    border: 0px none;
+    font: inherit;
+    text-align:center;    
+}
+
+.box{
+    /* Uniquement centrer le formulaire sur la page */ 
+    @extend %box;
+    width: 300px;
+    border: 3px solid $colorblack;
+    box-shadow: 2px 2px 2px 2px $colorblack ;
+    /* Encadré pour voir les limites du formulaire */
+    z-index: 3;
+  }
+  
+.boxy{
+    @extend %box;
+}
+
+.test {
+    position: relative;
+    background: $maincolor none repeat scroll 0% 0%;
+    overflow: unset;
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.test1{
+    position: relative;
+    background: $colormid;
+    overflow: unset;
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.gVOCQO {
+    position: fixed;
+    background-color: $figurecolor;
+    transform: rotate(60deg);
+    opacity: 0.5;    
+    min-width: 75vmin;
+    min-height: 75vmin;
+    bottom: -15vmin;
+    right: -15vmin;
+    display: block;
+    z-index: 1;
+}
+
+.eanPtI {
+    position: fixed;
+    border-radius: 50%;
+    background-color: $figurecolor;
+    opacity: 0.5;
+    top: -15vmin;
+    left: -15vmin;
+    min-width: 89vmin;
+    min-height: 89vmin;
+    display: block;
+    z-index: 1;
+}
+ header{
+     z-index: 1000;
+}
+
+h1{
+     width: 400px;
+     margin: 20px auto 20px auto;    
+     text-align: center;
+     color: white;     
+ }
+
+ footer{
+    position:fixed;
+    bottom:-10px;    
+    width:100%;   
+    padding-top:50px;    
+    height:40px;
+    text-align: right;
+    color: white;    
+ }
+
+ footer hr{
+     color: white;
+ }
+
+ .count{
+     color: white;
+ }
+
+ .valid{   
+    border:1px solid #000;
+    padding:5px;
+    background:#CCC;
+    text-decoration: none;
+    color: blue;
+ }
